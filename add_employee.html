@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Employee</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+    <style>
+
+        body{
+            margin:0;
+            background:#f5f6fa;
+            font-family:Arial;
+        }
+
+        .sidebar{
+            width:250px;
+            height:100vh;
+            background:#0f172a;
+            position:fixed;
+            left:0;
+            top:0;
+            padding:25px 20px;
+            color:white;
+        }
+
+        .logo{
+            font-size:32px;
+            font-weight:bold;
+            margin-bottom:35px;
+        }
+
+        .sidebar a{
+            display:flex;
+            align-items:center;
+            gap:12px;
+            color:#cbd5e1;
+            text-decoration:none;
+            padding:14px;
+            border-radius:10px;
+            margin-bottom:10px;
+        }
+
+        .sidebar a:hover{
+            background:#1e293b;
+        }
+
+        .main{
+            margin-left:250px;
+            padding:40px;
+        }
+
+        .card-box{
+            background:white;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0px 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .form-control,
+        .form-select{
+            margin-bottom:15px;
+            height:45px;
+            border-radius:10px;
+        }
+
+        .btn-save{
+            background:#111827;
+            color:white;
+            padding:12px 25px;
+            border:none;
+            border-radius:10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <div class="logo">
+        SmartPayroll
+    </div>
+
+    <a href="/dashboard">
+        <i class="fa-solid fa-table-columns"></i>
+        Dashboard
+    </a>
+
+    <a href="/employees">
+        <i class="fa-solid fa-users"></i>
+        Employees
+    </a>
+
+    <a href="/payroll">
+        <i class="fa-solid fa-wallet"></i>
+        Payroll
+    </a>
+
+    <a href="/leave">
+        <i class="fa-solid fa-calendar-days"></i>
+        Leaves
+    </a>
+
+    <a href="/upload_excel">
+        <i class="fa-solid fa-file-excel"></i>
+        Excel Upload
+    </a>
+
+    <a href="/logout">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Logout
+    </a>
+
+</div>
+
+<div class="main">
+
+    <div class="card-box">
+
+        <h2 class="mb-4">
+            Add Employee
+        </h2>
+
+        <form action="/add_employee" method="POST">
+
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <input type="text"
+                    name="name"
+                    class="form-control"
+                    placeholder="Employee Name"
+                    required>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <select name="department"
+                    class="form-select"
+                    required>
+
+                        <option value="">Select Department</option>
+                        <option>HR</option>
+                        <option>Finance</option>
+                        <option>IT</option>
+                        <option>Marketing</option>
+
+                    </select>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <input type="number"
+                    name="salary"
+                    class="form-control"
+                    placeholder="Basic Salary"
+                    required>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <input type="number"
+                    name="bonus"
+                    class="form-control"
+                    placeholder="Bonus">
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <input type="number"
+                    name="deduction"
+                    class="form-control"
+                    placeholder="Deduction">
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <input type="number"
+                    name="working_days"
+                    class="form-control"
+                    placeholder="Working Days">
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <input type="number"
+                    name="overtime_hours"
+                    class="form-control"
+                    placeholder="Overtime Hours">
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <input type="number"
+                    name="leave_days"
+                    class="form-control"
+                    placeholder="Leave Days">
+
+                </div>
+
+            </div>
+
+            <button type="submit"
+            class="btn-save">
+
+                Save Employee
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

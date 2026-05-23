@@ -1,0 +1,100 @@
+body{
+    margin:0;
+    background:#f1f5f9;
+    font-family:Arial;
+}
+
+.main-container{
+    display:flex;
+}
+
+.sidebar{
+    width:250px;
+    height:100vh;
+    background:#0f172a;
+    color:white;
+    padding:25px;
+    position:fixed;
+}
+
+.logo{
+    margin-bottom:40px;
+    font-weight:bold;
+}
+
+.sidebar ul{
+    list-style:none;
+    padding:0;
+}
+
+.sidebar ul li{
+    padding:15px;
+    margin-bottom:15px;
+    background:#1e293b;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.sidebar ul li:hover{
+    background:#2563eb;
+}
+
+.active{
+    background:#2563eb !important;
+}
+
+.process-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    margin-top:30px;
+}
+
+.content-area{
+    margin-left:270px;
+    padding:30px;
+    width:100%;
+}
+
+.topbar{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.analytics-card{
+    padding:25px;
+    border:none;
+    border-radius:20px;
+    box-shadow:0px 2px 10px rgba(0,0,0,0.1);
+}
+
+.blue-card{
+    background:linear-gradient(to right,#2563eb,#06b6d4);
+    color:white;
+}
+
+.chart-card,
+.upload-card,
+.table-card{
+    padding:25px;
+    border:none;
+    border-radius:20px;
+    box-shadow:0px 2px 10px rgba(0,0,0,0.1);
+}
+
+table thead{
+    background:#0f172a;
+    color:white;
+}
+
+.profile{
+    font-weight:bold;
+}
